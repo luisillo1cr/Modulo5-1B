@@ -100,6 +100,22 @@
       transform: translateY(-5px);
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+        border: 2px solid red;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: lightblue;
+    }
+    td {
+        background-color: pink;
+    }
+
     footer {
       background: #111;
       color: #fff;
@@ -159,26 +175,98 @@
       <div class="card">
         <div class="card-header">5.1.1 Operación de WLAN (video)</div>
         <div class="card-body"><p>Contenido del video sobre la operación de WLAN.</p>
-          <p>
+          <h3>Las redes inalámbricas tienen dos modos principales:</h3>
+          
+          <h4>Modo Infraestructura:</h4>
+          <ul style="list-style-type: circle;">
+          <li>Los dispositivos se conectan a través de un router, que usa cables Ethernet para conectarse a la red.</li>
+          </ul>
+          <h4>Modo AD HOC: </h4>
+          <ul style="list-style-type: circle;">
+          <li>Conexión directa entre dispositivos sin cables ni routers.</li>
+          </ul>
+          <h4>También existe el anclaje de red (hotspot), donde un móvil comparte su conexión a internet.</h4>
+          
+          <h3>En cuanto a la cobertura:</h3>
 
-          </p>
+          <ul style="list-style-type: circle;">
+          <li>BSS (Basic Service Set): Red inalámbrica en áreas pequeñas.</li>
+          <li>ESS (Extended Service Set): Red más grande con varias BSS conectadas por cable para mayor cobertura.</li>
+          </ul>  
+
         </div>
         
       </div>
       <div class="card">
         <div class="card-header">5.1.2 LAN Inalámbricas frente a redes cableadas</div>
         <div class="card-body"><p>Explicación de las diferencias entre LAN inalámbricas y redes cableadas.</p>
-          <p>
+          <h4>Las WLAN usan radiofrecuencias (RF) en lugar de cables en la capa física y sub capa MAC de la capa de enlace de datos.</h4>
+          <h4>Las WLAN comparten un origen similar con las de las Ethernet.</h4>
+          <h4>Los dos grupos de trabajo 802 dominantes son Ethernet 802.3 (define Ethernet para redes cableadas) y 802.11 (que define Ethernet para redes WLAN).</h4>
+          <h3>Las WLAN también difieren de las LAN conectadas por un cable de la siguiente manera:</h3>
+          <ul style="list-style-type: circle;">
+            <li>Las WLAN conectan clientes a la red mediante puntos de acceso (AP) inalámbrico</li>
+            <li>Las WLAN conectan los dispositivos móviles que, en, general están alimentados por baterías.</li>
+            <li>Las WLAN admite hosts que disputan el acceso a los medios de RF(CSMA)en lugar de frecuencia).</li>
+            <li>Las WLAN utilizan  un formato  de trama diferente al de las LAN Ethernet conectada por cable.</li>
+            <li>Las WLAN tienen mayores inconvenientes de privacidad debido a que las 
+              frecuencias de radio pueden salir fuera de las instalaciones.</li>
+              <br>
+              <table>
+                <tr>
+                    <th>Características</th>
+                    <th>LAN inalámbrica 802.11</th>
+                    <th>802.3 LANs Ethernet</th>
+                </tr>
+                <tr>
+                    <td>Capa física</td>
+                    <td>Frecuencia de radio (RF)</td>
+                    <td>Cables físicos</td>
+                </tr>
+                <tr>
+                    <td>Acceso de medios</td>
+                    <td>Prevención de colisiones</td>
+                    <td>Detección de colisiones</td>
+                </tr>
+                <tr>
+                    <td>Disponibilidad</td>
+                    <td>Cualquiera con una NIC inalámbrica en el rango de un punto de acceso</td>
+                    <td>Se requiere conexión por cable físico</td>
+                </tr>
+                <tr>
+                    <td>Interferencia en la señal</td>
+                    <td>Sí</td>
+                    <td>Mínimo</td>
+                </tr>
+                <tr>
+                    <td>Regulación</td>
+                    <td>Diferentes regulaciones por país</td>
+                    <td>El estándar IEEE dictamina</td>
+                </tr>
+            </table>  
+          </ul>
 
-          </p>
         </div>
       </div>
       <div class="card">
         <div class="card-header">5.1.3 Estructura de trama 802.11</div>
         <div class="card-body"><p>Detalles sobre la estructura de la trama 802.11.</p>
-          <p>
-
-          </p>
+          <h3>Recuerde que todos los tramos de capa 2 consisten en un encabezado, 
+            carga útil y sección de secuencia de verificación de trama (FCS).</h3>
+            <h3>Todas las tramas de 802.11 inalámbricos contienen los siguientes campos:</h3>
+            <ul style="list-style-type: circle;">
+            <li>Control de trama- Identifica el tipo de trama inalámbrica y contiene subcampos parala versión del protocolo.</li>
+            <li>Duración- En general, se usa para indicar el tiempo restante necesario para recibir la siguiente 
+              transmisión de tramas.</li>
+            <li>Dirección 1 - Normalmente, contiene la dirección MAC del dispositivo o AP receptor inalámbrico.</li>
+            <li>Dirección 2 - Normalmente, contiene la dirección MAC del dispositivo o AP receptor inalámbrico.</li>
+            <li>Dirección 3 - En ocasiones, contiene la dirección MAC del destino, como la interfaz del router 
+              (puerta de enlace predeterminada) a la que se conecta el AP.</li>
+            <li>Control de Secuencia - Contiene información para controlar la secuencia y 
+              las tramas fragmentadas</li>
+            <li>Dirección 4 - Suele estar vacío, ya que se usa solo en el modo ad hoc.</li>
+            <li>Payload ─ Contiene los datos para la transmisión.</li>
+          </ul>
         </div>
       </div>
       <div class="card">
