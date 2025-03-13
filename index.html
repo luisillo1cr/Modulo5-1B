@@ -245,7 +245,6 @@
                 </tr>
             </table>  
           </ul>
-
         </div>
       </div>
       <div class="card">
@@ -324,9 +323,17 @@
       <div class="card">
         <div class="card-header">5.1.8 Dispositivos inalámbricos - AP, LWAP y WLC</div>
         <div class="card-body"><p>Descripción de los dispositivos inalámbricos como AP, LWAP y WLC.</p>
-          <p>
-
-          </p>
+          <h4>
+           <ul> 
+            <li>Una LAN inalámbrica permite a los dispositivos conectarse sin cables, utilizando puntos de acceso inalámbrico (AP) y clientes 
+                con tarjetas de interfaz de red inalámbrica (NIC). En redes pequeñas, el router inalámbrico puede actuar como AP, mientras que en redes más grandes se utilizan múltiples AP.</li>
+          <br>
+          <li>La gestión de los AP se puede centralizar mediante una controladora de LAN inalámbrica (WLC), que transforma los AP en AP ligeros (LWAP).</li>
+          <br>
+          <li>Los LWAP no gestionan las funciones administrativas, como la autenticación o la configuración del SSID, 
+              que son realizadas por la WLC. Esto facilita la configuración y el monitoreo de muchos AP.</li>
+        </ul>
+        </h4>
         </div>
       </div>
     </section>
@@ -395,17 +402,24 @@
       <div class="card">
         <div class="card-header">5.2.4 Puntos de Acceso No Autorizados</div>
         <div class="card-body"><p>Riesgos de los puntos de acceso no autorizados en WLAN.</p>
-          <p>
-
-          </p>
+          <h4>
+          Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
+          como el robo de datos o acceso no autorizado a recursos de red.
+          </h4>
+          <h4>
+          Para prevenir esto, las organizaciones deben usar WLC con políticas de seguridad y monitoreo activo 
+          para detectar AP no autorizados.
+        </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header">5.2.5 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
-          <p>
-
-          </p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
         </div>
       </div>
     </section>
