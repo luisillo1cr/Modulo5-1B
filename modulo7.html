@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
   <link rel="manifest" href="/media/site.webmanifest">
   
-
-  <title>Modulo #5 1B</title>
+  
+  <title>Modulo #7 1B</title>
 
   <style>
     body {
@@ -150,6 +150,7 @@
     .toggle-button:hover {
       background: #1e90ff;
     }
+    
     .navigation-button {
     position: fixed;
     top: 50px;
@@ -167,6 +168,7 @@
     background: #1e90ff;
 }
 
+
   </style>
 </head>
 <body>
@@ -174,26 +176,26 @@
     <i class="fa-solid fa-moon"></i> Modo Oscuro
   </button>
   <button class="navigation-button"></button>
-  
 
 
   <header>
-    <h1>Comunicaciones Inalámbricas</h1>
-    <p>Explora los conceptos, amenazas y seguridad de las redes inalámbricas.</p>
+    <h1>SO Windows</h1>
+    <p>Explora la historia del Sistema Operativo Windows.</p>
   </header>
 
   <nav>
-    <a href="#comunicaciones">Comunicaciones Inalámbricas</a>
-    <a href="#amenazas">Amenazas a la WLAN</a>
-    <a href="#wlan-seguras">WLAN Seguras</a>
+    <a href="#Historia">Historia de Windows</a>
+    <a href="#Arquitectura">Arquitectura y operaciones de Windows</a>
+    <a href="#Configuracion">Configuración y monitoreo de Windows</a>
+    <a href="#Seguridad">Seguridad de Windows</a>
   </nav>
 
   <div class="container">
 
-    <section id="comunicaciones">
-      <h2>5.1 Comunicaciones Inalámbricas</h2>
+    <section id="Historia">
+      <h2>7.1 Historia de Windows</h2>
       <div class="card">
-        <div class="card-header">5.1.1 Operación de WLAN (video)</div>
+        <div class="card-header">7.1.1 Sistema operativo de disco</div>
         <div class="card-body"><p>Contenido del video sobre la operación de WLAN.</p>
           <h3>Las redes inalámbricas tienen dos modos principales:</h3>
           
@@ -218,7 +220,7 @@
         
       </div>
       <div class="card">
-        <div class="card-header">5.1.2 LAN Inalámbricas frente a redes cableadas</div>
+        <div class="card-header">7.1.2 Versiones de Windows</div>
         <div class="card-body"><p>Explicación de las diferencias entre LAN inalámbricas y redes cableadas.</p>
           <h4>Las WLAN usan radiofrecuencias (RF) en lugar de cables en la capa física y sub capa MAC de la capa de enlace de datos.</h4>
           <h4>Las WLAN comparten un origen similar con las de las Ethernet.</h4>
@@ -268,7 +270,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.3 Estructura de trama 802.11</div>
+        <div class="card-header">7.1.3 GUI de Windows</div>
         <div class="card-body"><p>Detalles sobre la estructura de la trama 802.11.</p>
           <h3>Recuerde que todos los tramos de capa 2 consisten en un encabezado, 
             carga útil y sección de secuencia de verificación de trama (FCS).</h3>
@@ -289,7 +291,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.4 CSMA/CA</div>
+        <div class="card-header">7.1.4 Vulnerabilidades del Sistema Operativo</div>
         <div class="card-body"><p>Explicación del método CSMA/CA utilizado en WLAN.</p>
           <h3>Las WLAN funcionan en modo semidúplex, lo que significa que solo un dispositivo puede enviar o recibir a la vez. Como no pueden detectar colisiones mientras transmiten, usan CSMA/CA para evitar interferencias.</h3>
             <h3>El proceso es el siguiente:</h3>
@@ -302,66 +304,12 @@
             </ul>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">5.1.5 Cliente inalámbrica y asociación al AP</div>
-        <div class="card-body"><h3><p>Cómo un cliente inalámbrico se asocia a un punto de acceso (AP).</p></h3>
-          <ul style="list-style-type: circle;">
-              <li>Un cliente inalámbrico es un dispositivo (como un teléfono, laptop o tablet) que se conecta a una red Wi-Fi.</li>
-              <li>La asociación al AP (Access Point) es el proceso mediante el cual el cliente se conecta a un punto de acceso (AP).</li>
-          </ul>
-          <h3><p>Proceso de asociación:</p></h3>
-          <ul style="list-style-type: circle;"> 
-              <li>El cliente busca redes Wi-Fi disponibles.</li>
-              <li>Elige un AP y envía una solicitud para conectarse.</li>
-              <li>El AP verifica la solicitud (en caso de ser una red protegida, solicita contraseña).</li>
-              <li>Si la autenticación es correcta, se establece la conexión y el cliente se asocia al AP.</li>
-              <li>La asociación asegura que el cliente tenga acceso a la red y pueda enviar/recibir datos de forma segura.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">5.1.6 Modo de descubrimiento Pasivo y Activo</div>
-        <div class="card-body"><p>Cómo funcionan los modos de descubrimiento pasivo y activo en WLAN.</p>
-          <p>
-            <h3>Descubrimiento activo:</h3>
-            <ul style="list-style-type: circle;">
-            <li>El cliente inalámbrico envía una solicitud explícita (pidiendo información sobre redes disponibles) mediante una consulta (Probe Request).</li>
-            <li>Los puntos de acceso (AP) responden con una respuesta (Probe Response), que contiene información sobre la red, como el nombre de la red (SSID), el tipo de seguridad, etc.</li>
-            <li>Este modo permite una búsqueda más activa de redes, ya que el cliente solicita directamente la información.</li>
-            </ul>
-
-            <h3>Descubrimiento pasivo:</h3>
-            <ul style="list-style-type: circle;">
-            <li>El cliente no solicita activamente información. En su lugar, el punto de acceso envía periódicamente beacons (señales de baliza) que contienen información sobre la red (SSID, capacidad, tipo de seguridad, etc.).</li>
-            <li>El cliente escucha esos beacons para conocer las redes disponibles.</li>
-            <li>Este método consume menos recursos en el cliente, pero es más lento ya que depende de la frecuencia de los beacons.</li>
-            </ul>
-            <h3>En resumen, el descubrimiento activo involucra solicitudes del cliente, mientras que el pasivo depende de los beacons enviados por el AP.</h3>          
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">5.1.8 Dispositivos inalámbricos - AP, LWAP y WLC</div>
-        <div class="card-body"><p>Descripción de los dispositivos inalámbricos como AP, LWAP y WLC.</p>
-          <h4>
-           <ul> 
-            <li>Una LAN inalámbrica permite a los dispositivos conectarse sin cables, utilizando puntos de acceso inalámbrico (AP) y clientes 
-                con tarjetas de interfaz de red inalámbrica (NIC). En redes pequeñas, el router inalámbrico puede actuar como AP, mientras que en redes más grandes se utilizan múltiples AP.</li>
-          <br>
-          <li>La gestión de los AP se puede centralizar mediante una controladora de LAN inalámbrica (WLC), que transforma los AP en AP ligeros (LWAP).</li>
-          <br>
-          <li>Los LWAP no gestionan las funciones administrativas, como la autenticación o la configuración del SSID, 
-              que son realizadas por la WLC. Esto facilita la configuración y el monitoreo de muchos AP.</li>
-        </ul>
-        </h4>
-        </div>
-      </div>
     </section>
 
-    <section id="amenazas">
-      <h2>5.2.1 Amenazas a la WLAN</h2>
+    <section id="Arquitectura">
+      <h2>7.2.1 Arquitectura y operaciones de Windows</h2>
       <div class="card">
-        <div class="card-header">5.2.1 Video - Amenazas en la WLAN</div>
+        <div class="card-header">7.2.1 Video - Amenazas en la WLAN</div>
         <div class="card-body">
           <h3>Las WLAN pueden ser vulnerables a ataques si alguien dentro del alcance tiene las credenciales. Los atacantes pueden ser externos o incluso empleados, sin necesidad de estar físicamente en el lugar.</h3>
           <ul>
@@ -387,7 +335,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.2 Resumen de Seguridad Inalámbrica</div>
+        <div class="card-header">7.2.2 Resumen de Seguridad Inalámbrica</div>
         <div class="card-body">
           <h3>La seguridad inalámbrica protege las redes Wi-Fi contra accesos no autorizados y ataques. Principales medidas:</h3>
           <ul style="list-style-type: circle;"> 
@@ -400,7 +348,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.3 Ataques DoS</div>
+        <div class="card-header">7.2.3 Ataques DoS</div>
         <div class="card-body"><p>Explicación de los ataques DoS en redes WLAN.</p>
           <h3>Ataque DoS (Denial of Service - Negación de Servicio):</h3>
           <ul style="list-style-type: circle;">
@@ -420,8 +368,8 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.4 Puntos de Acceso No Autorizados</div>
-        <div class="card-body"><p>Riesgos de los puntos de acceso no autorizados en WLAN.</p>
+        <div class="card-header">7.2.4 Puntos de Acceso No Autorizados</div>
+        <div class="card-body"><p>Riegos de los puntos de acceso no autorizados en WLAN.</p>
           <h4>
           Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
           como el robo de datos o acceso no autorizado a recursos de red.
@@ -433,7 +381,77 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.5 Ataque de intermediario</div>
+        <div class="card-header">7.2.5 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.6 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.7 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.8 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.9 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.10 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.11 Ataque de intermediario</div>
+        <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+          <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+            <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+            <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+            <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+          </h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.2.12 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -444,10 +462,10 @@
       </div>
     </section>
 
-    <section id="wlan-seguras">
-      <h2>5.3 WLAN Seguras</h2>
+    <section id="Configuracion">
+      <h2>7.3 Configuración y monitoreo de Windows</h2>
       <div class="card">
-        <div class="card-header">5.3.1 Video – WLAN seguras</div>
+        <div class="card-header">7.3.1 Video – WLAN seguras</div>
         <div class="card-body"><p>Contenido del video sobre cómo asegurar una WLAN.</p>
           <h4><p>
             Una WLAN segura es una red Wi-Fi protegida con contraseñas fuertes y encriptación (como WPA2 o WPA3) para evitar accesos no autorizados y proteger los datos transmitidos.
@@ -455,7 +473,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
+        <div class="card-header">7.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
         <div class="card-body">
             <h3>Encubrimiento de SSID</h3>
             <ul style="list-style-type: circle;">
@@ -481,7 +499,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.3 Métodos de autenticación original 802.11</div>
+        <div class="card-header">7.3.3 Métodos de autenticación original 802.11</div>
         <div class="card-body">
           <h3>Autenticación abierta:</h3>
           <ul style="list-style-type: circle;">
@@ -494,7 +512,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.4 Métodos de Autenticación de Clave Compartida</div>
+        <div class="card-header">7.3.4 Métodos de Autenticación de Clave Compartida</div>
         <div class="card-body">
           <h4>Qué es:</h4> 
           <ul style="list-style-type: circle;">
@@ -507,7 +525,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.5 Autenticación de un usuario doméstico</div>
+        <div class="card-header">7.3.5 Autenticación de un usuario doméstico</div>
         <div class="card-body"><p>Cómo autenticar a un usuario en una red doméstica.</p>
           <h4>WPA2 Personal (PSK): </h4>
           <ul>
@@ -520,7 +538,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.6 Métodos de Encriptación</div>
+        <div class="card-header">7.3.6 Métodos de Encriptación</div>
         <div class="card-body"><p>Explicación de los métodos de encriptación en WLAN.</p>
           <h4>TKIP:</h4>
           <ul>
@@ -534,7 +552,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.7 Autenticación en la Empresa</div>
+        <div class="card-header">7.3.7 Autenticación en la Empresa</div>
         <div class="card-body"><p>Métodos de autenticación utilizados en entornos empresariales.</p>
           <h4>Qué es:</h4>
           <ul>
@@ -547,86 +565,212 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.8 WPA3</div>
+        <div class="card-header">7.3.8 WPA3</div>
+        <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
+          <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.3.9 WPA3</div>
+        <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
+          <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.3.10 WPA3</div>
+        <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
+          <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.3.11 WPA3</div>
+        <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
+          <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.3.12 WPA3</div>
+        <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
+          <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">7.3.13 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
     </section>
+
+    <section id="Seguridad">
+        <h2>7.4 Seguridad de Windows</h2>
+        <div class="card">
+          <div class="card-header">7.4.1 El comando netstat</div>
+          <div class="card-body">
+            <h3>Las WLAN pueden ser vulnerables a ataques si alguien dentro del alcance tiene las credenciales. Los atacantes pueden ser externos o incluso empleados, sin necesidad de estar físicamente en el lugar.</h3>
+            <ul>
+              <li>Interceptación de datos:
+                Los datos inalámbricos deben estar encriptados.
+              </li>
+              <li>
+                Intrusos inalámbricos:
+                Usuarios no autorizados que intentan acceder
+                a los recursos de la red.
+              </li>
+              <li>
+                Ataques de denegación de servicio (DoS):
+                El acceso a los servicios WLAN puede verse
+                comprometidos.
+              </li>
+              <li>
+                Puntos de acceso no autorizados:
+                Aps no autorizados instalados por un usuario
+                bienintencionado o con fines malintencionados.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">7.4.2 Visor de Eventos</div>
+          <div class="card-body">
+            <h3>La seguridad inalámbrica protege las redes Wi-Fi contra accesos no autorizados y ataques. Principales medidas:</h3>
+            <ul style="list-style-type: circle;"> 
+                <li>Cifrado: WPA2/WPA3 son los más seguros, protegen los datos.</li>
+                <li>Autenticación: PSK (contraseña compartida) o EAP (en redes corporativas).</li>
+                <li>Filtrado MAC: Controla qué dispositivos pueden acceder a la red.</li>
+                <li>Ocultación del SSID: Hace invisible el nombre de la red, pero no es muy seguro.</li>
+                <li>La seguridad depende de usar contraseñas fuertes, cifrado adecuado y control de acceso.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">7.4.3 Administración de Actualizaciones de Windows</div>
+          <div class="card-body"><p>Explicación de los ataques DoS en redes WLAN.</p>
+            <h3>Ataque DoS (Denial of Service - Negación de Servicio):</h3>
+            <ul style="list-style-type: circle;">
+              <li>Es un ataque cibernético cuyo objetivo es interrumpir o deshabilitar un servicio o red, haciendo que no esté disponible para los usuarios legítimos.</li>
+            </ul>
+              <h3>Cómo funciona:</h3>
+            <ul style="list-style-type: circle;">
+              <li>El atacante envía una gran cantidad de tráfico o solicitudes al servidor o red objetivo.</li>
+              <li>Esto consume todos los recursos del sistema (como ancho de banda, procesamiento o memoria).</li>
+              <li>El sistema se sobrecarga y no puede responder a las solicitudes legítimas, causando una denegación de servicio.</li>
+            </ul>
+              <h3>Variante:</h3>
+            <ul style="list-style-type: circle;">
+              <li>DDoS (Distributed Denial of Service): Es un ataque DoS realizado desde múltiples dispositivos, lo que lo hace más difícil de bloquear.</li>
+            </ul>
+            <h3>En resumen, un ataque DoS busca colapsar un sistema al sobrecargarlo con tráfico malicioso.</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">7.4.4 Política de Seguridad Local</div>
+          <div class="card-body"><p>Riegos de los puntos de acceso no autorizados en WLAN.</p>
+            <h4>
+            Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
+            como el robo de datos o acceso no autorizado a recursos de red.
+            </h4>
+            <h4>
+            Para prevenir esto, las organizaciones deben usar WLC con políticas de seguridad y monitoreo activo 
+            para detectar AP no autorizados.
+          </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">7.4.5 Windows Defender</div>
+          <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+            <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+              <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+              <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+              <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">7.4.6 Firewall de Windows Defender</div>
+          <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
+            <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
+              <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
+              <h4>Los usuarios, al conectarse al AP falso, permiten que el atacante capture y manipule su tráfico.</h4>
+              <h4>La defensa contra estos ataques requiere monitoreo constante de la red y autenticación de los dispositivos para identificar y bloquear accesos no legítimos.</h4>
+            </h4>
+          </div>
+        </div>
+    </section>
+
   </div>
 
   <footer>
-        <p>&copy; 2025 Ciberseguridad 1B, Módulo 5.</p>
+        <p>&copy; 2025 Ciberseguridad 1B, Módulo 7.</p>
         <p>Todos los derechos reservados.</p>
     </div>
 </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-      // Verificar si el modo oscuro estaba activado en localStorage
-      if (localStorage.getItem("dark-mode") === "enabled") {
-          document.body.classList.add("dark-mode");
-      }
+    document.addEventListener("DOMContentLoaded", () => {
+        // Verificar si el modo oscuro estaba activado en localStorage
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            document.body.classList.add("dark-mode");
+        }
 
-      // Asegurar que el botón muestra el icono correcto
-      updateDarkModeButton();
+        // Asegurar que el botón muestra el icono correcto
+        updateDarkModeButton();
 
-      // Código para que las tarjetas sean funcionales
-      const cards = document.querySelectorAll('.card-header');
-      cards.forEach(card => {
-          card.addEventListener('click', () => {
-              const body = card.nextElementSibling;
-              if (body.style.display === 'block') {
-                  body.style.display = 'none';
-              } else {
-                  document.querySelectorAll('.card-body').forEach(b => b.style.display = 'none');
-                  body.style.display = 'block';
-              }
-          });
-      });
+        // Código para que las tarjetas sean funcionales
+        const cards = document.querySelectorAll('.card-header');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const body = card.nextElementSibling;
+                if (body.style.display === 'block') {
+                    body.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.card-body').forEach(b => b.style.display = 'none');
+                    body.style.display = 'block';
+                }
+            });
+        });
 
-      // Verificar en qué página estamos y actualizar el botón de navegación
-      const navButton = document.querySelector(".navigation-button");
-      if (navButton) {
-          if (window.location.pathname.includes("modulo7.html")) {
-              navButton.textContent = "Volver a Módulo 5";
-              navButton.addEventListener("click", () => {
-                  window.location.href = "index.html";
-              });
-          } else {
-              navButton.textContent = "Ir a Módulo 7";
-              navButton.addEventListener("click", () => {
-                  window.location.href = "modulo7.html";
-              });
-          }
-      }
-  });
+        // Verificar en qué página estamos y actualizar el botón de navegación
+        const navButton = document.querySelector(".navigation-button");
+        if (navButton) {
+            if (window.location.pathname.includes("modulo7.html")) {
+                navButton.textContent = "Volver a Módulo 5";
+                navButton.addEventListener("click", () => {
+                    window.location.href = "index.html";
+                });
+            } else {
+                navButton.textContent = "Ir a Módulo 7";
+                navButton.addEventListener("click", () => {
+                    window.location.href = "modulo7.html";
+                });
+            }
+        }
+    });
 
-  function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
 
-      // Guardar estado en localStorage
-      if (document.body.classList.contains("dark-mode")) {
-          localStorage.setItem("dark-mode", "enabled");
-      } else {
-          localStorage.setItem("dark-mode", "disabled");
-      }
+        // Guardar estado en localStorage
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+        }
 
-      updateDarkModeButton();
-  }
+        updateDarkModeButton();
+    }
 
-  function updateDarkModeButton() {
-      const button = document.querySelector(".toggle-button");
-      const icon = button.querySelector("i");
+    function updateDarkModeButton() {
+        const button = document.querySelector(".toggle-button");
+        const icon = button.querySelector("i");
 
-      if (document.body.classList.contains("dark-mode")) {
-          button.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
-      } else {
-          button.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Oscuro';
-      }
-  }
+        if (document.body.classList.contains("dark-mode")) {
+            button.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+        } else {
+            button.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Oscuro';
+        }
+    }
 </script>
-
 
 
 
