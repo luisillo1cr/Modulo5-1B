@@ -8,175 +8,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
   <link rel="manifest" href="/media/site.webmanifest">
-  
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 
   <title>Modulo #5 1B</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body.dark-mode {
-      background-color: #1e1e1e;
-      color: #f4f4f9;
-    }
-
-    header {
-      background-color: #28a8db;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-    }
-
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .container {
-      width: 80%;
-      margin: 20px auto;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #28a8db;
-    }
-
-    .card {
-      background-color: #ffffff;
-      margin: 10px 0;
-      border-radius: 5px;
-      transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
-    }
-
-    body.dark-mode .card {
-      background-color: #2c2c2c;
-      color: #f4f4f9;
-    }
-
-    .card-header {
-      background-color: #28a8db;
-      color: white;
-      padding: 15px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 15px; /* Esto hará los bordes redondeados */
-    }
-
-    .card-body {
-      display: none;
-      padding: 10px;
-      background-color: #ebeaea;
-    }
-
-    body.dark-mode .card-body {
-      background-color: #3a3a3a;
-    }
-
-    .card-header:hover {
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      transform: translateY(-5px);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-        border: 2px solid red;
-        padding: 10px;
-        text-align: center;
-    }
-    th {
-        background-color: lightblue;
-    }
-    td {
-        background-color: pink;
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-  }
-
-  .footer-content {
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-      opacity: 0.8;
-  }
-
-    .toggle-button {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      padding: 10px;
-      background: #28a8db;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .toggle-button:hover {
-      background: #1e90ff;
-    }
-    .navigation-button {
-    position: fixed;
-    top: 50px;
-    right: 10px;
-    padding: 10px 15px;
-    background: #28a8db;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.navigation-button:hover {
-    background: #1e90ff;
-}
-
-  </style>
 </head>
 <body>
   <button class="toggle-button" onclick="toggleDarkMode()">
     <i class="fa-solid fa-moon"></i> Modo Oscuro
   </button>
-  <button class="navigation-button"></button>
   
-
-
   <header>
     <h1>Comunicaciones Inalámbricas</h1>
     <p>Explora los conceptos, amenazas y seguridad de las redes inalámbricas.</p>
@@ -188,12 +30,17 @@
     <a href="#wlan-seguras">WLAN Seguras</a>
   </nav>
 
+<!-- Botón de Navegación (Cambio entre módulos) -->
+<button class="navigation-button" id="navButton"></button>
+
   <div class="container">
 
     <section id="comunicaciones">
       <h2>5.1 Comunicaciones Inalámbricas</h2>
       <div class="card">
-        <div class="card-header">5.1.1 Operación de WLAN (video)</div>
+        <div class="card-header" onclick="toggleCard(this)">
+          5.1.1 Operación de WLAN (video)
+        </div>
         <div class="card-body"><p>Contenido del video sobre la operación de WLAN.</p>
           <h3>Las redes inalámbricas tienen dos modos principales:</h3>
           
@@ -218,7 +65,7 @@
         
       </div>
       <div class="card">
-        <div class="card-header">5.1.2 LAN Inalámbricas frente a redes cableadas</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.2 LAN Inalámbricas frente a redes cableadas</div>
         <div class="card-body"><p>Explicación de las diferencias entre LAN inalámbricas y redes cableadas.</p>
           <h4>Las WLAN usan radiofrecuencias (RF) en lugar de cables en la capa física y sub capa MAC de la capa de enlace de datos.</h4>
           <h4>Las WLAN comparten un origen similar con las de las Ethernet.</h4>
@@ -268,7 +115,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.3 Estructura de trama 802.11</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.3 Estructura de trama 802.11</div>
         <div class="card-body"><p>Detalles sobre la estructura de la trama 802.11.</p>
           <h3>Recuerde que todos los tramos de capa 2 consisten en un encabezado, 
             carga útil y sección de secuencia de verificación de trama (FCS).</h3>
@@ -289,7 +136,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.4 CSMA/CA</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.4 CSMA/CA</div>
         <div class="card-body"><p>Explicación del método CSMA/CA utilizado en WLAN.</p>
           <h3>Las WLAN funcionan en modo semidúplex, lo que significa que solo un dispositivo puede enviar o recibir a la vez. Como no pueden detectar colisiones mientras transmiten, usan CSMA/CA para evitar interferencias.</h3>
             <h3>El proceso es el siguiente:</h3>
@@ -303,7 +150,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.5 Cliente inalámbrica y asociación al AP</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.5 Cliente inalámbrica y asociación al AP</div>
         <div class="card-body"><h3><p>Cómo un cliente inalámbrico se asocia a un punto de acceso (AP).</p></h3>
           <ul style="list-style-type: circle;">
               <li>Un cliente inalámbrico es un dispositivo (como un teléfono, laptop o tablet) que se conecta a una red Wi-Fi.</li>
@@ -320,7 +167,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.6 Modo de descubrimiento Pasivo y Activo</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.6 Modo de descubrimiento Pasivo y Activo</div>
         <div class="card-body"><p>Cómo funcionan los modos de descubrimiento pasivo y activo en WLAN.</p>
           <p>
             <h3>Descubrimiento activo:</h3>
@@ -341,7 +188,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.1.8 Dispositivos inalámbricos - AP, LWAP y WLC</div>
+        <div class="card-header" onclick="toggleCard(this)">5.1.8 Dispositivos inalámbricos - AP, LWAP y WLC</div>
         <div class="card-body"><p>Descripción de los dispositivos inalámbricos como AP, LWAP y WLC.</p>
           <h4>
            <ul> 
@@ -361,7 +208,7 @@
     <section id="amenazas">
       <h2>5.2.1 Amenazas a la WLAN</h2>
       <div class="card">
-        <div class="card-header">5.2.1 Video - Amenazas en la WLAN</div>
+        <div class="card-header" onclick="toggleCard(this)">5.2.1 Video - Amenazas en la WLAN</div>
         <div class="card-body">
           <h3>Las WLAN pueden ser vulnerables a ataques si alguien dentro del alcance tiene las credenciales. Los atacantes pueden ser externos o incluso empleados, sin necesidad de estar físicamente en el lugar.</h3>
           <ul>
@@ -387,7 +234,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.2 Resumen de Seguridad Inalámbrica</div>
+        <div class="card-header" onclick="toggleCard(this)">5.2.2 Resumen de Seguridad Inalámbrica</div>
         <div class="card-body">
           <h3>La seguridad inalámbrica protege las redes Wi-Fi contra accesos no autorizados y ataques. Principales medidas:</h3>
           <ul style="list-style-type: circle;"> 
@@ -400,7 +247,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.3 Ataques DoS</div>
+        <div class="card-header" onclick="toggleCard(this)">5.2.3 Ataques DoS</div>
         <div class="card-body"><p>Explicación de los ataques DoS en redes WLAN.</p>
           <h3>Ataque DoS (Denial of Service - Negación de Servicio):</h3>
           <ul style="list-style-type: circle;">
@@ -420,7 +267,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.4 Puntos de Acceso No Autorizados</div>
+        <div class="card-header" onclick="toggleCard(this)">5.2.4 Puntos de Acceso No Autorizados</div>
         <div class="card-body"><p>Riesgos de los puntos de acceso no autorizados en WLAN.</p>
           <h4>
           Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
@@ -433,7 +280,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.2.5 Ataque de intermediario</div>
+        <div class="card-header" onclick="toggleCard(this)">5.2.5 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -447,7 +294,7 @@
     <section id="wlan-seguras">
       <h2>5.3 WLAN Seguras</h2>
       <div class="card">
-        <div class="card-header">5.3.1 Video – WLAN seguras</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.1 Video – WLAN seguras</div>
         <div class="card-body"><p>Contenido del video sobre cómo asegurar una WLAN.</p>
           <h4><p>
             Una WLAN segura es una red Wi-Fi protegida con contraseñas fuertes y encriptación (como WPA2 o WPA3) para evitar accesos no autorizados y proteger los datos transmitidos.
@@ -455,7 +302,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
         <div class="card-body">
             <h3>Encubrimiento de SSID</h3>
             <ul style="list-style-type: circle;">
@@ -481,7 +328,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.3 Métodos de autenticación original 802.11</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.3 Métodos de autenticación original 802.11</div>
         <div class="card-body">
           <h3>Autenticación abierta:</h3>
           <ul style="list-style-type: circle;">
@@ -494,7 +341,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.4 Métodos de Autenticación de Clave Compartida</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.4 Métodos de Autenticación de Clave Compartida</div>
         <div class="card-body">
           <h4>Qué es:</h4> 
           <ul style="list-style-type: circle;">
@@ -507,7 +354,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.5 Autenticación de un usuario doméstico</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.5 Autenticación de un usuario doméstico</div>
         <div class="card-body"><p>Cómo autenticar a un usuario en una red doméstica.</p>
           <h4>WPA2 Personal (PSK): </h4>
           <ul>
@@ -520,7 +367,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.6 Métodos de Encriptación</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.6 Métodos de Encriptación</div>
         <div class="card-body"><p>Explicación de los métodos de encriptación en WLAN.</p>
           <h4>TKIP:</h4>
           <ul>
@@ -534,7 +381,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.7 Autenticación en la Empresa</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.7 Autenticación en la Empresa</div>
         <div class="card-body"><p>Métodos de autenticación utilizados en entornos empresariales.</p>
           <h4>Qué es:</h4>
           <ul>
@@ -547,7 +394,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header">5.3.8 WPA3</div>
+        <div class="card-header" onclick="toggleCard(this)">5.3.8 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
@@ -560,75 +407,6 @@
         <p>Todos los derechos reservados.</p>
     </div>
 </footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-      // Verificar si el modo oscuro estaba activado en localStorage
-      if (localStorage.getItem("dark-mode") === "enabled") {
-          document.body.classList.add("dark-mode");
-      }
-
-      // Asegurar que el botón muestra el icono correcto
-      updateDarkModeButton();
-
-      // Código para que las tarjetas sean funcionales
-      const cards = document.querySelectorAll('.card-header');
-      cards.forEach(card => {
-          card.addEventListener('click', () => {
-              const body = card.nextElementSibling;
-              if (body.style.display === 'block') {
-                  body.style.display = 'none';
-              } else {
-                  document.querySelectorAll('.card-body').forEach(b => b.style.display = 'none');
-                  body.style.display = 'block';
-              }
-          });
-      });
-
-      // Verificar en qué página estamos y actualizar el botón de navegación
-      const navButton = document.querySelector(".navigation-button");
-      if (navButton) {
-          if (window.location.pathname.includes("modulo7.html")) {
-              navButton.textContent = "Volver a Módulo 5";
-              navButton.addEventListener("click", () => {
-                  window.location.href = "index.html";
-              });
-          } else {
-              navButton.textContent = "Ir a Módulo 7";
-              navButton.addEventListener("click", () => {
-                  window.location.href = "modulo7.html";
-              });
-          }
-      }
-  });
-
-  function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-
-      // Guardar estado en localStorage
-      if (document.body.classList.contains("dark-mode")) {
-          localStorage.setItem("dark-mode", "enabled");
-      } else {
-          localStorage.setItem("dark-mode", "disabled");
-      }
-
-      updateDarkModeButton();
-  }
-
-  function updateDarkModeButton() {
-      const button = document.querySelector(".toggle-button");
-      const icon = button.querySelector("i");
-
-      if (document.body.classList.contains("dark-mode")) {
-          button.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
-      } else {
-          button.innerHTML = '<i class="fa-solid fa-moon"></i> Modo Oscuro';
-      }
-  }
-</script>
-
-
-
 
 </body>
 
