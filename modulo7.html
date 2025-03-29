@@ -39,9 +39,9 @@
     <section id="Historia">
       <h2>7.1 Historia de Windows</h2>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.1.1 Sistema operativo de disco</div>
+        <div class="card-header">7.1.1 Sistema operativo de disco</div>
         <div class="card-body">
-          <h4>Las computadoras no tenian discos duros ni memoria USB. Usaban tarjetas perforadas,
+          <h4>Las computadoras no tenían discos duros ni memoria USB. Usaban tarjetas perforadas,
             cintas de papel y casetes para almacenar datos</h4>
           <h4>
             Con la llegada de los disquetes y discos duros, se necesitó un software para
@@ -60,7 +60,7 @@
       </div>
 
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.1.2 Vulnerabilidades del sistema operativo</div>
+        <div class="card-header">7.1.2 Vulnerabilidades del sistema operativo</div>
         <div class="card-body">
           <h3>
             Los sistemas operativos pueden tener vulnerabilidades que los atacantes explotan
@@ -68,7 +68,7 @@
             en riesgo la seguridad y el funcionamiento del sistema.
           </h3>
             <h3>Protección y Seguridad en Windows</h3>
-            <ul style="list-style-type: circle;">
+            <ul>
               <BR>
               <li>Protección contra malware: Windows Defender protege contra virus y amenazas. Si
                 está desactivado, el sistema es más vulnerable.
@@ -88,6 +88,15 @@
               <li>Firewall: Windows Firewall controla la comunicación en la red; se debe revisar y
                 actualizar periódicamente.
               </li>
+              <li>
+                Permisos de archivos: Asignar permisos adecuados evita accesos no autorizados.
+              </li>
+              <li>
+                Contraseñas seguras: Usar contraseñas fuertes, sobre todo en cuentas de administrador.
+              </li>
+              <li>
+                Inicio de sesión como administrador: Se recomienda usar cuentas estándar y solo elevar privilegios cuando sea necesario.
+              </li>
             </ul>
         </div>
       </div>
@@ -96,7 +105,7 @@
     <section id="Arquitectura">
       <h2>7.2 Arquitectura y operaciones de Windows</h2>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.1 Capa de Abstracción de Hardware</div>
+        <div class="card-header" >7.2.1 Capa de Abstracción de Hardware</div>
         <div class="card-body">
           <h3>Windows es compatible con distintos tipos de hardware, ya sea en computadoras
             compradas o ensambladas. Para funcionar, usa una Capa de Abstracción de Hardware
@@ -104,28 +113,28 @@
           </h3>
           <h3>
             El kernel es el núcleo del sistema operativo y controla la computadora, gestionando
-entrada/salida, memoria y periféricos. Aunque depende de la HAL, en algunos casos se
-comunica directamente con el hardware.
+            entrada/salida, memoria y periféricos. Aunque depende de la HAL, en algunos casos se
+            comunica directamente con el hardware.
           </h3>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.2 Modo de Usuario y Modo de Kernel</div>
+        <div class="card-header">7.2.2 Modo de Usuario y Modo de Kernel</div>
         <div class="card-body">
           <h3>
             Modos de ejecución: Núcleo (kernel): Código del sistema operativo con acceso
-completo al hardware; errores pueden colapsar el sistema. Usuario: Ejecución de
-aplicaciones con acceso restringido; errores afectan solo la aplicación. Controladores
-y espacios de direcciones Pueden operar en ambos modos.
+            completo al hardware; errores pueden colapsar el sistema. Usuario: Ejecución de
+            aplicaciones con acceso restringido; errores afectan solo la aplicación. Controladores
+            y espacios de direcciones Pueden operar en ambos modos.
           </h3>
           <h3>
             En núcleo se usa un único espacio de direcciones, mientras que en usuario cada
-aplicación tiene su espacio privado.
+            aplicación tiene su espacio privado.
           </h3>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.3 Sistema de Archivos de Windows</div>
+        <div class="card-header">7.2.3 Sistema de Archivos de Windows</div>
         <div class="card-body">
           <h3>
             exFAT: Sistema simple, compatible con muchos SO. FAT presenta limitaciones
@@ -138,14 +147,34 @@ aplicación tiene su espacio privado.
             <h3>
               EXT: Usado en Linux. Windows lee particiones EXT con ayuda de software.
             </h3>
-          <ul style="list-style-type: circle;">
-            <li>DDoS (Distributed Denial of Service): Es un ataque DoS realizado desde múltiples dispositivos, lo que lo hace más difícil de bloquear.</li>
-          </ul>
-          <h3>En resumen, un ataque DoS busca colapsar un sistema al sobrecargarlo con tráfico malicioso.</h3>
+            <h3>
+              NTFS:
+            </h3>
+            <ul>
+              <li>
+                Principal en Windows; soportado también en Linux.
+              </li>
+              <li>
+                Mac OS X solo lee NTFS, pero puede escribir con drivers especiales.
+              </li>
+              <li>
+                Soporta archivos y particiones grandes, seguridad avanzada y encriptación.
+              </li>
+              <li>
+                Utiliza descriptores de seguridad y marcas de tiempo (MACE) para el control y seguimiento de archivos.
+              </li>
+            </ul>
+            <h3>
+              Formateo y particionado:
+            </h3>
+            <h4>
+              Antes de usar un disco, se particiona y formatea (usualmente con NTFS) 
+              para crear estructuras clave como el sector de arranque, la Master File Table (MFT), archivos del sistema y el área de archivos.
+            </h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.4 Puntos de Acceso No Autorizados</div>
+        <div class="card-header"  >7.2.4 Puntos de Acceso No Autorizados</div>
         <div class="card-body"><p>Riegos de los puntos de acceso no autorizados en WLAN.</p>
           <h4>
           Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
@@ -158,7 +187,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.5 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.5 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -168,7 +197,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.6 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.6 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -178,7 +207,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.7 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.7 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -188,7 +217,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.8 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.8 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -198,7 +227,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.9 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.9 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -208,7 +237,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.10 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.10 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -218,7 +247,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.11 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.11 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -228,7 +257,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.2.12 Ataque de intermediario</div>
+        <div class="card-header"  >7.2.12 Ataque de intermediario</div>
         <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
           <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
             <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -242,7 +271,7 @@ aplicación tiene su espacio privado.
     <section id="Configuracion">
       <h2>7.3 Configuración y monitoreo de Windows</h2>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.1 Video – WLAN seguras</div>
+        <div class="card-header"  >7.3.1 Video – WLAN seguras</div>
         <div class="card-body"><p>Contenido del video sobre cómo asegurar una WLAN.</p>
           <h4><p>
             Una WLAN segura es una red Wi-Fi protegida con contraseñas fuertes y encriptación (como WPA2 o WPA3) para evitar accesos no autorizados y proteger los datos transmitidos.
@@ -250,7 +279,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
+        <div class="card-header"  >7.3.2 Encubrimiento SSID y filtrado de direcciones MAC</div>
         <div class="card-body">
             <h3>Encubrimiento de SSID</h3>
             <ul style="list-style-type: circle;">
@@ -276,7 +305,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.3 Métodos de autenticación original 802.11</div>
+        <div class="card-header"  >7.3.3 Métodos de autenticación original 802.11</div>
         <div class="card-body">
           <h3>Autenticación abierta:</h3>
           <ul style="list-style-type: circle;">
@@ -289,7 +318,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.4 Métodos de Autenticación de Clave Compartida</div>
+        <div class="card-header"  >7.3.4 Métodos de Autenticación de Clave Compartida</div>
         <div class="card-body">
           <h4>Qué es:</h4> 
           <ul style="list-style-type: circle;">
@@ -302,7 +331,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.5 Autenticación de un usuario doméstico</div>
+        <div class="card-header"  >7.3.5 Autenticación de un usuario doméstico</div>
         <div class="card-body"><p>Cómo autenticar a un usuario en una red doméstica.</p>
           <h4>WPA2 Personal (PSK): </h4>
           <ul>
@@ -315,7 +344,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.6 Métodos de Encriptación</div>
+        <div class="card-header"  >7.3.6 Métodos de Encriptación</div>
         <div class="card-body"><p>Explicación de los métodos de encriptación en WLAN.</p>
           <h4>TKIP:</h4>
           <ul>
@@ -329,7 +358,7 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.7 Autenticación en la Empresa</div>
+        <div class="card-header"  >7.3.7 Autenticación en la Empresa</div>
         <div class="card-body"><p>Métodos de autenticación utilizados en entornos empresariales.</p>
           <h4>Qué es:</h4>
           <ul>
@@ -342,37 +371,37 @@ aplicación tiene su espacio privado.
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.8 WPA3</div>
+        <div class="card-header"  >7.3.8 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.9 WPA3</div>
+        <div class="card-header"  >7.3.9 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.10 WPA3</div>
+        <div class="card-header"  >7.3.10 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.11 WPA3</div>
+        <div class="card-header"  >7.3.11 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)"> 7.3.12 WPA3</div>
+        <div class="card-header"  > 7.3.12 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" onclick="toggleCard(this)">7.3.13 WPA3</div>
+        <div class="card-header"  >7.3.13 WPA3</div>
         <div class="card-body"><p>Introducción y ventajas del protocolo WPA3 para seguridad WLAN.</p>
           <h4>Es el estándar más reciente de seguridad para redes Wi-Fi. Ofrece mejor protección que WPA2, con mejor cifrado y mayor resistencia a ataques de diccionario, especialmente en redes públicas.</h4>
         </div>
@@ -382,7 +411,7 @@ aplicación tiene su espacio privado.
     <section id="Seguridad">
         <h2>7.4 Seguridad de Windows</h2>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.1 El comando netstat</div>
+          <div class="card-header"  >7.4.1 El comando netstat</div>
           <div class="card-body">
             <h3>Las WLAN pueden ser vulnerables a ataques si alguien dentro del alcance tiene las credenciales. Los atacantes pueden ser externos o incluso empleados, sin necesidad de estar físicamente en el lugar.</h3>
             <ul>
@@ -408,7 +437,7 @@ aplicación tiene su espacio privado.
           </div>
         </div>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.2 Visor de Eventos</div>
+          <div class="card-header"  >7.4.2 Visor de Eventos</div>
           <div class="card-body">
             <h3>La seguridad inalámbrica protege las redes Wi-Fi contra accesos no autorizados y ataques. Principales medidas:</h3>
             <ul style="list-style-type: circle;"> 
@@ -421,7 +450,7 @@ aplicación tiene su espacio privado.
           </div>
         </div>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.3 Administración de Actualizaciones de Windows</div>
+          <div class="card-header"  >7.4.3 Administración de Actualizaciones de Windows</div>
           <div class="card-body"><p>Explicación de los ataques DoS en redes WLAN.</p>
             <h3>Ataque DoS (Denial of Service - Negación de Servicio):</h3>
             <ul style="list-style-type: circle;">
@@ -441,7 +470,7 @@ aplicación tiene su espacio privado.
           </div>
         </div>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.4 Política de Seguridad Local</div>
+          <div class="card-header"  >7.4.4 Política de Seguridad Local</div>
           <div class="card-body"><p>Riegos de los puntos de acceso no autorizados en WLAN.</p>
             <h4>
             Puntos de acceso no autorizados son dispositivos que se conectan sin permiso a la red corporativa. Estos pueden ser routers inalámbricos falsos que permiten ataques 
@@ -454,7 +483,7 @@ aplicación tiene su espacio privado.
           </div>
         </div>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.5 Windows Defender</div>
+          <div class="card-header"  >7.4.5 Windows Defender</div>
           <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
             <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
               <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
@@ -464,7 +493,7 @@ aplicación tiene su espacio privado.
           </div>
         </div>
         <div class="card">
-          <div class="card-header" onclick="toggleCard(this)">7.4.6 Firewall de Windows Defender</div>
+          <div class="card-header"  >7.4.6 Firewall de Windows Defender</div>
           <div class="card-body"><p>Descripción del ataque de intermediario (Man-in-the-Middle) en WLAN.</p>
             <h4>Un ataque de intermediario (MITM) ocurre cuando un atacante se coloca entre dos entidades legítimas para interceptar o modificar datos.</h4>
               <h4>Un tipo común de MITM en redes inalámbricas es el ataque de "AP gemelo malvado", donde un atacante crea un AP con el mismo SSID que un AP legítimo. </h4>
