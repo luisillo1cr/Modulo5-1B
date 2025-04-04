@@ -14,11 +14,18 @@
   <title>Modulo #5 1B</title>
 
 </head>
+
 <body>
   <button class="toggle-button" onclick="toggleDarkMode()">
     <i class="fa-solid fa-moon"></i> Modo Oscuro
   </button>
-  
+
+  <!-- Reproductor de audio invisible -->
+  <audio id="musica" autoplay loop>
+  <source src="media/c148.mp3" type="audio/mp3">
+  Tu navegador no soporta el formato de audio.
+  </audio>
+
   <header>
     <h1>Comunicaciones Inalámbricas</h1>
     <p>Explora los conceptos, amenazas y seguridad de las redes inalámbricas.</p>
@@ -407,6 +414,18 @@
         <p>Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById('musica');
+    if (audio) {
+        console.log('El elemento de audio está disponible');
+        audio.volume = 0.4;  // Establecer el volumen al 40%
+    } else {
+        console.log('El elemento de audio NO está disponible');
+    }
+});
+</script>
 
 </body>
 

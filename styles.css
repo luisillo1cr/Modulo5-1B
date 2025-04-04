@@ -179,5 +179,14 @@
         .toggle-button:hover {
         background: #1e90ff;
         }
+
+        .zoom-image {
+            display: block;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
         
+        .zoom-image:hover {
+            transform: scale(1.2);
+        }
 
