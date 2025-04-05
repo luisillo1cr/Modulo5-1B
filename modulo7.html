@@ -47,18 +47,18 @@
       <div class="card">
         <div class="card-header">7.1.1 Sistema operativo de disco</div>
         <div class="card-body">
-          <h3>Las computadoras no tenían discos duros ni memoria USB. Usaban tarjetas perforadas,
-            cintas de papel y casetes para almacenar datos</h3>
-          <h3>
+          <h4>Las computadoras no tenían discos duros ni memoria USB. Usaban tarjetas perforadas,
+            cintas de papel y casetes para almacenar datos</h4>
+          <h4>
             Con la llegada de los disquetes y discos duros, se necesitó un software para
             gestionarlos. Así nació el Sistema Operativo de Disco (DOS), que organizaba archivos
             en los discos.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Microsoft compró DOS y creó MS-DOS, un sistema basado en comandos
             de texto para gestionar archivos y programas que permitía que las computadoras
             accedieran al disco y cargaran el sistema operativo.            
-          </h3>
+          </h4>
 
         </div>
         
@@ -67,12 +67,12 @@
       <div class="card">
         <div class="card-header">7.1.2 Vulnerabilidades del sistema operativo</div>
         <div class="card-body">
-          <h3>
+          <h4>
             Los sistemas operativos pueden tener vulnerabilidades que los atacantes explotan
             para obtener acceso no autorizado, modificar permisos o manipular datos. Esto pone
             en riesgo la seguridad y el funcionamiento del sistema.
-          </h3>
-            <h3>Protección y Seguridad en Windows</h3>
+          </h4>
+            <h4>Protección y Seguridad en Windows</h4>
             <ul>
               
               <li>Protección contra malware: Windows Defender protege contra virus y amenazas. Si
@@ -108,9 +108,9 @@
       <div class="card">
         <div class="card-header">7.1.3 GUI de Windows</div>
         <div class="card-body">
-          <h3>Windows tiene una interfaz gráfica de usuario (Graphical User Interface, GUI) para que los usuarios trabajen con software y archivos de datos. 
+          <h4>Windows tiene una interfaz gráfica de usuario (Graphical User Interface, GUI) para que los usuarios trabajen con software y archivos de datos. 
             La interfaz gráfica de usuario tiene un área principal que es conocida como El Escritorio, mostrada en la figura.
-          </h3>
+          </h4>
           <img src="media/GUI.png" alt="" class="zoom-image">
         </div>
       </div>
@@ -122,49 +122,49 @@
       <div class="card">
         <div class="card-header" >7.2.1 Capa de Abstracción de Hardware</div>
         <div class="card-body">
-          <h3>Windows es compatible con distintos tipos de hardware, ya sea en computadoras
+          <h4>Windows es compatible con distintos tipos de hardware, ya sea en computadoras
             compradas o ensambladas. Para funcionar, usa una Capa de Abstracción de Hardware
             (HAL), que gestiona la comunicación entre el hardware y el kernel.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             El kernel es el núcleo del sistema operativo y controla la computadora, gestionando
             entrada/salida, memoria y periféricos. Aunque depende de la HAL, en algunos casos se
             comunica directamente con el hardware.
-          </h3>
+          </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header">7.2.2 Modo de Usuario y Modo de Kernel</div>
         <div class="card-body">
-          <h3>
+          <h4>
             Modos de ejecución: Núcleo (kernel): Código del sistema operativo con acceso
             completo al hardware; errores pueden colapsar el sistema. Usuario: Ejecución de
             aplicaciones con acceso restringido; errores afectan solo la aplicación. Controladores
             y espacios de direcciones Pueden operar en ambos modos.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             En núcleo se usa un único espacio de direcciones, mientras que en usuario cada
             aplicación tiene su espacio privado.
-          </h3>
+          </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header">7.2.3 Sistema de Archivos de Windows</div>
         <div class="card-body">
-          <h3>
+          <h4>
             exFAT: Sistema simple, compatible con muchos SO. FAT presenta limitaciones
             (particiones, tamaños); FAT32 es el más usado.
-          </h3>
-            <h3>
+          </h4>
+            <h4>
               HFS+: Sistema de Mac OS X, permite nombres y tamaños mayores. Windows puede
               leerlo con software especializado.
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               EXT: Usado en Linux. Windows lee particiones EXT con ayuda de software.
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               NTFS:
-            </h3>
+            </h4>
             <ul>
               <li>
                 Principal en Windows; soportado también en Linux.
@@ -179,93 +179,95 @@
                 Utiliza descriptores de seguridad y marcas de tiempo (MACE) para el control y seguimiento de archivos.
               </li>
             </ul>
-            <h3>
+            <h4>
               Formateo y particionado:
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               Antes de usar un disco, se particiona y formatea (usualmente con NTFS) 
               para crear estructuras clave como el sector de arranque, la Master File Table (MFT), archivos del sistema y el área de archivos.
-            </h3>
+            </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header">7.2.4 Flujo de Datos Alternativo (ADS)</div>
         <div class="card-body">
-          <h3>
+          <h4>
             NTFS almacena archivos como atributos (nombre, marca de hora, etc.), 
             con los datos en el atributo DATA. Permite flujos de datos alternativos (ADS) para almacenar información extra, que puede ser usado maliciosamente para ocultar código. Los archivos con 
             ADS se identifican con el nombre seguido de dos puntos, por ejemplo, Testfile.txt:ADS.
-          </h3>
+          </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header"  >7.2.5 Proceso de Arranque de Windows</div>
         <div class="card-body">
-          <h3>
+          <h4>
             Firmware y arranque: Con BIOS, se hace POST, se localiza el 
             MBR y se carga el sistema operativo. Con UEFI, se cargan archivos .efi desde la partición 
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             ESP, mejorando la seguridad. 
             Proceso de carga: Bootmgr.exe lee la base de datos de arranque (BCD).
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Si la computadora estaba en hibernación, se usa Winresume.exe; 
             si no, Winload.exe carga el registro y verifica los controladores.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Inicio del sistema: Ntoskrnl.exe inicia el núcleo de Windows y configura la HAL.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             SMSS crea el entorno de usuario e inicia Winlogon para el acceso del usuario.
-          </h3>
+          </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header"  >7.2.6 Procesos, subprocesos y servicios</div>
         <div class="card-body">
-          <h3>
+          <h4>
             Una aplicación se compone de procesos, cada uno con al menos un subproceso.
-          <h3>
+          <h4>
             Los subprocesos comparten el mismo espacio de direcciones, 
           aislados de otros procesos.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Windows permite multitarea, ejecutando múltiples subprocesos 
             según la cantidad de procesadores.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Algunos procesos son servicios que operan en segundo plano y son esenciales para el sistema.
-          </h3>
-          <h3>Los servicios se pueden configurar (iniciar, detener, reiniciar) 
-          mediante el panel de Servicios, y se debe tener cuidado con sus dependencias.</h3>
-          </h3>
+          </h4>
+          <h4>Los servicios se pueden configurar (iniciar, detener, reiniciar) 
+          mediante el panel de Servicios, y se debe tener cuidado con sus dependencias.</h4>
+          </h4>
         </div>
       </div>
       <div class="card">
         <div class="card-header"  >7.2.7 Asignación de Memoria y Controladores</div>
-        <div class="card-body">  
+        <div class="card-body">
+         <h4> 
         La memoria RAM almacena instrucciones hasta que la CPU las procesa.
         Cada proceso tiene un espacio de direcciones virtuales: 4 GB en Windows 32 ‑bits y 8 TB en 64‑bits.
         El sistema traduce direcciones virtuales a físicas mediante tablas de página.
         Los procesos usan identificadores para acceder a recursos del núcleo sin conexión directa.RAMMap 
         (de Sysinternals) permite visualizar cómo Windows asigna la memoria del sistema.
+          <h4/>
         </div>
       </div>
       <div class="card">
         <div class="card-header"  >7.2.8 El Registro de Windows</div>
         <div class="card-body">
-          <h3>Windows almacena información sobre hardware, aplicaciones, usuarios y configuración en una base de datos llamada el Registro. 
+          <h4>Windows almacena información sobre hardware, aplicaciones, usuarios y configuración en una base de datos llamada el Registro. 
             Este registro es jerárquico y organiza la información en subárboles, claves y subclaves. Los valores, que contienen los datos, se guardan en las claves 
             y subclaves. Una clave puede tener hasta 512 niveles de profundidad. 
-            También se registra cómo interactúan estos objetos, como los archivos que abren las aplicaciones o los detalles de las propiedades de las carpetas.</h3>  
-          <h3>HKEY_CURRENT_USER (HKCU) Contiene información sobre el usuario actualmente conectado.</h3>
-          <h3>HKEY_USERS (HKU) Contiene información sobre todas las cuentas de usuario en el host.</h3>
-          <h3>HKEY_CLASSES_ROOT (HKCR) Almacena información sobre la vinculación e incrustación de objetos (OLE), 
+            También se registra cómo interactúan estos objetos, como los archivos que abren las aplicaciones o los detalles de las propiedades de las carpetas.</h4>  
+          <h4>HKEY_CURRENT_USER (HKCU) Contiene información sobre el usuario actualmente conectado.</h4>
+          <h4>HKEY_USERS (HKU) Contiene información sobre todas las cuentas de usuario en el host.</h4>
+          <h4>HKEY_CLASSES_ROOT (HKCR) Almacena información sobre la vinculación e incrustación de objetos (OLE), 
             que permite integrar objetos de otras aplicaciones (por ejemplo, una hoja de cálculo en un documento de Word).
-          </h3>
-          <h3>HKEY_LOCAL_MACHINE (HKLM) Contiene información relacionada con el sistema.</h3>
-          <h3>HKEY_CURRENT_CONFIG (HKCC) Contiene información sobre el perfil de hardware actual.</h3>
+          </h4>
+          <h4>HKEY_LOCAL_MACHINE (HKLM) Contiene información relacionada con el sistema.</h4>
+          <h4>HKEY_CURRENT_CONFIG (HKCC) Contiene información sobre el perfil de hardware actual.</h4>
         </div>
       </div>
     </section>
@@ -275,7 +277,7 @@
       <div class="card">
         <div class="card-header"  >7.3.1 Ejecutar como administrador</div>
         <div class="card-body">
-          <h3>Evitar iniciar sesión con cuentas administrativas:</h3> 
+          <h4>Evitar iniciar sesión con cuentas administrativas:</h4> 
             <ul>
               <li>No se recomienda iniciar sesión con cuentas administrativas 
                 debido al riesgo de que el malware obtenga acceso completo a los archivos.
@@ -287,22 +289,22 @@
       <div class="card">
         <div class="card-header">7.3.2 CLI y PowerShell</div>
         <div class="card-body">
-          <h3>La CLI de Windows (cmd.exe) permite ejecutar programas, gestionar archivos y navegar por el sistema. 
+          <h4>La CLI de Windows (cmd.exe) permite ejecutar programas, gestionar archivos y navegar por el sistema. 
           Se pueden crear archivos por lotes para automatizar comandos. Se accede buscándolo en el sistema 
           y puede ejecutarse como administrador para más control.
           PowerShell es una alternativa más avanzada que permite automatizar 
           tareas mediante cmdlets, scripts (.ps1) y funciones. Se abre buscando 
           "PowerShell" y también puede ejecutarse con privilegios de administrador.
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Estos son los tipos de comandos que puede ejecutar PowerShell:
-        </h3>
+        </h4>
         <ul>
           <li>cmdlets - estos comandos realizan una acción y envían un resultado u objeto al siguiente comando que se ejecutará.</li>
           <li>Scripts de PowerShell - estos son archivos con una extensión .ps1 que contienen comandos de PowerShell que se ejecutan.</li>
           <li>Funciones de PowerShell - estas son fragmentos de código a los que se puede hacer referencia en un script.</li>
         </ul>
-        <h3>Para obtener más información sobre Windows PowerShell y comenzar a usarlo, escriba en PowerShell, como se ve en la salida del comando.</h3>
+        <h4>Para obtener más información sobre Windows PowerShell y comenzar a usarlo, escriba en PowerShell, como se ve en la salida del comando.</h4>
         <pre>
           Windows PowerShell
             Copyright (C) Microsoft Corporation. All rights reserved.
@@ -343,7 +345,7 @@
             -- More --
           </pre>
           
-          <h3>Hay cuatro niveles de ayuda de Windows PowerShell:</h3>
+          <h4>Hay cuatro niveles de ayuda de Windows PowerShell:</h4>
             <ul>
             <li>get-help PS command - Muestra ayuda básica para un comando</li>
             <li>get-help _PS command[-examples] - Muestra una ayuda con ejemplos básica para un comando</li>
@@ -355,25 +357,25 @@
       <div class="card">
         <div class="card-header">7.3.3 Administrador de Tareas y Monitor de Recursos</div>
         <div class="card-body">
-          <h3>El Administrador de tareas y otras herramientas de Windows ayudan a los administradores a monitorear aplicaciones, 
+          <h4>El Administrador de tareas y otras herramientas de Windows ayudan a los administradores a monitorear aplicaciones, 
             servicios y procesos. También permiten analizar el rendimiento del sistema (CPU, memoria, red) y detectar posibles 
             problemas, como malware o fallos en componentes.
-          </h3>
+          </h4>
           <img src="media/taskmanager.png" alt="" class="zoom-image">
         </div>
       </div>
       <div class="card">
         <div class="card-header"  >7.3.4 Accediendo a Recursos de Red</div>
         <div class="card-body">
-          <h3>
+          <h4>
             Windows usa redes para compartir archivos y recursos mediante SMB y UNC. 
             Los recursos compartidos pueden tener permisos de acceso y algunos administrativos llevan $ en su nombre 
             (ej. C$). Se puede acceder a ellos escribiendo la ruta UNC en el explorador de archivos.
-          </h3>
-          <h3>
+          </h4>
+          <h4>
             Para controlar computadoras remotas, Windows usa RDP (Escritorio Remoto), pero debe manejarse 
             con precaución ya que puede ser un objetivo de ataques. Se recomienda restringir su acceso y aplicar medidas de seguridad como Zero Trust.
-          </h3>
+          </h4>
           <img src="media/remote_desktop.png" alt="" class="zoom-image">
         </div>
       </div>
@@ -384,34 +386,34 @@
         <div class="card">
           <div class="card-header">7.4.1 El comando netstat</div>
           <div class="card-body">
-            <h3>
+            <h4>
               El comando <b><u>netstat</u></b> puede usarse para buscar conexiones entrantes o salientes no autorizadas. 
               Cuando se cree que un programa puede ser malware, se puede investigar para determinar su legitimidad. 
               Para facilitar el proceso, es posible vincular las conexiones con los procesos en ejecución en el Administrador de tareas. 
-            </h3>
+            </h4>
           </div>
         </div>
         <div class="card">
           <div class="card-header">7.4.2 windows defender</div>
           <div class="card-body">
-            <h3>El malware incluye virus, gusanos, troyanos, registradores de teclado, spyware y adware. 
+            <h4>El malware incluye virus, gusanos, troyanos, registradores de teclado, spyware y adware. 
               Estos están diseñados para invadir la privacidad, robar información y dañar la computadora o los datos.
               <img src="media/panel_win_def.png" class="zoom-image">
-            </h3
+            </h4
             
           </div>
         </div>
         <div class="card">
           <div class="card-header"  >7.4.3 Firewall windows defender </div>
           <div class="card-body">
-            <h3>
+            <h4>
               Un firewall deniega selectivamente el tráfico a una PC o a un segmento de red. Los firewalls suelen 
               actuar abriendo y cerrando los puertos que utilizan diversas aplicaciones. 
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               Se rechaza todo paquete 
               que no esté explícitamente permitido. 
-            </h3>
+            </h4>
             <img src="media/win_def.png" class="zoom-image">
           </div>
         </div>
